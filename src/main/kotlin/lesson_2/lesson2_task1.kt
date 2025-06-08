@@ -9,7 +9,7 @@ fun main() {
     val studentScores4 = 5
 
     val arithmeticMean: Float = (studentScores1 + studentScores2 + studentScores3 + studentScores4) / numberOfStudents.toFloat()
-    val formatedArithmeticMean = String.format("%.2f", arithmeticMean)
+    val formatedArithmeticMean = "%.2f".format(arithmeticMean)
 
     println(formatedArithmeticMean)
 
