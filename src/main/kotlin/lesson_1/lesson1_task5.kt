@@ -5,10 +5,10 @@ fun main() {
     val flightTime = 6480
 
     // Вычисляем часы, минуты и остаток секунд
-    val hours = flightTime / 3600
-    val remainingSecondsAfterHours = flightTime % 3600
-    val minutes = remainingSecondsAfterHours / 60
-    val seconds = remainingSecondsAfterHours % 60
+    val hours = flightTime / FORMAT_TIME
+    val remainingSecondsAfterHours = flightTime % FORMAT_TIME
+    val minutes = remainingSecondsAfterHours / FORMAT_TIME2
+    val seconds = remainingSecondsAfterHours % FORMAT_TIME2
 
     // Форматируем значения до двух цифр
     val formattedHours = String.format("%02d", hours)
@@ -19,3 +19,6 @@ fun main() {
     println("$formattedHours:$formattedMinutes:$formattedSeconds")
 
 }
+
+const val FORMAT_TIME = 3600
+const val FORMAT_TIME2 = 60
