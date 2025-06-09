@@ -12,10 +12,7 @@ fun main() {
     val minutesOfArrival = (minutesOfDeparture + minutesOnRoad) % FORMAT_TIME
     val arrivalHour = hourDeparture + hoursOnRoad + hourFromMinutesConversion
 
-    val formatArrivalHour = String.format("%02d", arrivalHour)
-    val formatMinutesOfArrival = String.format("%02d", minutesOfArrival)
-
-    println("Время прибытия поезда: $formatArrivalHour:$formatMinutesOfArrival")
+    println("Время прибытия поезда: %02d:%02d".format(arrivalHour,minutesOfArrival))
 
 }
 
