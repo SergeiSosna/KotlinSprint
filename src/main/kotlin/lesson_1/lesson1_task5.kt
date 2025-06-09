@@ -10,13 +10,8 @@ fun main() {
     val minutes = remainingSecondsAfterHours / FORMAT_TIME2
     val seconds = remainingSecondsAfterHours % FORMAT_TIME2
 
-    // Форматируем значения до двух цифр
-    val formattedHours = String.format("%02d", hours)
-    val formattedMinutes = String.format("%02d", minutes)
-    val formattedSeconds = String.format("%02d", seconds)
-
     // Выводим результат
-    println("$formattedHours:$formattedMinutes:$formattedSeconds")
+    println("%02d:%02d:%02d".format(hours,minutes,seconds))
 
 }
 
