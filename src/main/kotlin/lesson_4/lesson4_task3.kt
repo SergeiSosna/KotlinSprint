@@ -2,13 +2,15 @@ package org.example.lesson_4
 
 fun main() {
 
-    val sunnyWeatherToday = true
-    val openAwningAtTheMoment = true
+    val isSunny = true
+    val isAwningOpen = true
     val airHumidity = 20
     val currentTimeOfYear = "зима"
 
-    println("Благоприятные ли условия сейчас для роста бобовых?\nНаличие солнечной погоды: ${sunnyWeatherToday == SUNNY_WEATHER}\nОткрытый тент: ${openAwningAtTheMoment == OPEN_AWNING}\nВлажность воздуха:${airHumidity == AIR_HUMIDITY}\nТекущее время года:${currentTimeOfYear != CURRENT_TIME_OF_YEAR}")
+    val analysisOfConditions = isSunny == SUNNY_WEATHER && isAwningOpen == OPEN_AWNING && airHumidity == AIR_HUMIDITY
+            && currentTimeOfYear != CURRENT_TIME_OF_YEAR
 
+    println("Благоприятные ли условия сейчас для роста бобовых? $analysisOfConditions")
 
 }
 
