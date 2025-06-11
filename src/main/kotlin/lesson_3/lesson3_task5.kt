@@ -4,13 +4,10 @@ fun main() {
 
     val input = "D2-D4;0"
 
-    val parts = input.split(";")
-    val moveParts = parts[0]
-    val moveNumber = parts.getOrNull(1)?.toIntOrNull()?:0
-
-    val moves = moveParts.split("-")
-    val moveFromWhere = moves[0]
-    val moveWhere = moves[1]
+    val parts = input.split(";","-")
+    val moveFromWhere = parts[0]
+    val moveWhere = parts[1]
+    val moveNumber = parts.getOrNull(2)?.toIntOrNull()?:0
 
     println("Откуда ход:$moveFromWhere")
     println("Куда ход:$moveWhere")
