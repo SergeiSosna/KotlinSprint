@@ -10,7 +10,7 @@ fun main() {
     val analysisOfConditions = isSunny == SUNNY_WEATHER && isAwningOpen == OPEN_AWNING && airHumidity == AIR_HUMIDITY
             && currentTimeOfYear != CURRENT_TIME_OF_YEAR
 
-    println("Благоприятные ли условия сейчас для роста бобовых? $analysisOfConditions")
+    println("Благоприятные ли условия сейчас для роста бобовых?$analysisOfConditions")
 
 }
 
