@@ -8,11 +8,9 @@ fun main() {
     val currentYear = 2025
     val userAge = currentYear - yearOfBirth
 
-    if (userAge >= AGE_OF_MAJORITY){
+    if (userAge >= AGE_OF_MAJORITY) {
         println("Show special content")
-    }else if (userAge ==16 || userAge ==17){
-        println("Show limit content")
-    }else{
+    } else {
         println("Back to main screen")
     }
 
