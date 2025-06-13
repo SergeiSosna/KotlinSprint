@@ -1,5 +1,7 @@
 package org.example.lesson_5
 
+import kotlin.random.Random
+
 fun main() {
 
     println(
@@ -9,21 +11,24 @@ fun main() {
     """.trimIndent()
     )
 
+    val min = 0
+    val max = 42
+    val hiddenNumber1 = (min..max).random()
+    val hiddenNumber2 = (min..max).random()
+
     println("Введите первое число:")
     val enteredNumber1 = readln().toInt()
 
     println("Введите второе число:")
     val enteredNumber2 = readln().toInt()
 
-    val hiddenNumber1 = 5
-    val hiddenNumber2 = 30
 
-    val resultText = if ((enteredNumber1 == hiddenNumber1 || enteredNumber1 == hiddenNumber2)
-        && (enteredNumber2 == hiddenNumber1 || enteredNumber2 == hiddenNumber2)
+    val resultText = if ((enteredNumber1 == hiddenNumber1 || enteredNumber1 == hiddenNumber2) &&
+        (enteredNumber2 == hiddenNumber1 || enteredNumber2 == hiddenNumber2)
     ) {
         "Поздравляем! Вы выиграли главный приз!"
-    } else if ((enteredNumber1 == hiddenNumber1 || enteredNumber1 == hiddenNumber2)
-        || (enteredNumber2 == hiddenNumber1 || enteredNumber2 == hiddenNumber2)
+    } else if ((enteredNumber1 == hiddenNumber1 || enteredNumber1 == hiddenNumber2) ||
+        (enteredNumber2 == hiddenNumber1 || enteredNumber2 == hiddenNumber2)
     ) {
         "Вы выиграли утешительный приз!"
     } else {
