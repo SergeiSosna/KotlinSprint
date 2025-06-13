@@ -19,28 +19,15 @@ fun main() {
     val userHeightInMeters = userHeight / CENTIMETERS_IN_A_METER
 
     val bmi = userWeight / (userHeightInMeters * userHeightInMeters)
-    val bmiResult = if (bmi < BMI_MIN) {
-        "Ваш ИМТ: ${"%.2f".format(bmi)}. Недостаточная масса тела."
-    } else if (bmi >= BMI_MIN && bmi < BMI_AVERAGE) {
-        "Ваш ИМТ: ${"%.2f".format(bmi)}. Нормальная масса тела."
-    } else if (bmi >= BMI_AVERAGE && bmi < BMI_MAX) {
-        "Ваш ИМТ: ${"%.2f".format(bmi)}. Избыточная масса тела."
-    } else if (bmi >= BMI_MAX) {
-        "Ваш ИМТ: ${"%.2f".format(bmi)}. Ожирение."
-    } else {
-        "Неправильное значение."
+
+    val bmiResult = when {
+        bmi < BMI_MIN -> "Ваш ИМТ: ${"%.2f".format(bmi)}. Недостаточная масса тела."
+        bmi < BMI_AVERAGE -> "Ваш ИМТ: ${"%.2f".format(bmi)}. Нормальная масса тела."
+        bmi < BMI_MAX -> "Ваш ИМТ: ${"%.2f".format(bmi)}. Избыточная масса тела."
+        else -> "Ваш ИМТ: ${"%.2f".format(bmi)}. Ожирение."
     }
 
     println(bmiResult)
-
-//    val bmiResult = when {
-//        bmi < BMI_MIN -> "Ваш ИМТ: ${"%.2f".format(bmi)}. Недостаточная масса тела."
-//        bmi < BMI_AVERAGE -> "Ваш ИМТ: ${"%.2f".format(bmi)}. Нормальная масса тела."
-//        bmi < BMI_MAX -> "Ваш ИМТ: ${"%.2f".format(bmi)}. Избыточная масса тела."
-//        else -> "Ваш ИМТ: ${"%.2f".format(bmi)}. Ожирение."
-//    }
-//
-//    println(bmiResult)
 
 }
 
