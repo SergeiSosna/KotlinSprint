@@ -22,7 +22,6 @@ fun main() {
     println("Введите второе число:")
     val enteredNumber2 = readln().toInt()
 
-
     val resultText = if ((enteredNumber1 == hiddenNumber1 || enteredNumber1 == hiddenNumber2) &&
         (enteredNumber2 == hiddenNumber1 || enteredNumber2 == hiddenNumber2)
     ) {
