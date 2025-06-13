@@ -10,7 +10,7 @@ fun main() {
     val enteredNumbers = mutableListOf<Int>()
     println("Введите $WINNING_NUMBERS различных числа от $min до $max:")
 
-    while (enteredNumbers.size < 3) {
+    while (enteredNumbers.size < WINNING_NUMBERS) {
         println("Введите число #${enteredNumbers.size + 1}")
         val enteredNumber = readln()
 
