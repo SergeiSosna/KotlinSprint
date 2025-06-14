@@ -23,7 +23,7 @@ fun main() {
     val totalFuelCost = fuelForTheTrip * fuelCost
 
     println(
-        "Общее количество топлива:${"%.2f".format(fuelForTheTrip)}.\n" +
+        "Общее количество необходимого топлива:${"%.2f".format(fuelForTheTrip)}.\n" +
                 "Итоговая стоимость поездки:${"%.2f".format(totalFuelCost)}"
     )
 
